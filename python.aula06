@@ -1,0 +1,363 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPNdGw4lLQ5ceZmtjpMOL4l",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Furianoite/Aula-de-Progama-o-FPB/blob/main/python.aula06\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "4EinDhZV0fHf",
+        "outputId": "885e1b5a-69e5-4bc9-e6d2-77f1ddfdcd8a"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['ze', 'tião', 'joaquim', 'julia', 'Ana', 'Zabe', 'Maria']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 1
+        }
+      ],
+      "source": [
+        "nomes = ['ze', 'tião','joaquim']\n",
+        "nomes.append('julia')\n",
+        "nomes\n",
+        "\n",
+        "#vários valores\n",
+        "outrosNomes = ['Ana', 'Zabe', 'Maria']\n",
+        "\n",
+        "nomes.extend(outrosNomes)\n",
+        "\n",
+        "nomes\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Crie uma lista de números e \n",
+        "numeros = [2, 4, 1, 6 , 9, 12]\n",
+        "#remove o primeiro elemento da lista\n",
+        "numeros.remove(numeros[0])\n",
+        "#remove no último número da lista\n",
+        "numeros.pop()\n",
+        " \n",
+        "numeros"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "QYkrcldG_Aw6",
+        "outputId": "fb0e5d73-2a6c-4bad-f6fd-ed84fbe4472b"
+      },
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[4, 1, 6, 9]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 7
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#1 - Crie ua lista de nota , e exiba da menor para o maior\n",
+        "notas = [2,10,9,4,7,3,8]\n",
+        "nomes = ['Ademar','Maristênio','Asdrúbal','Leo']\n",
+        "notas.sort()\n",
+        "nomes.sort(reverse=True)\n",
+        "#2 - Crie uma lista de nomes de frutas e ordene-a em \n",
+        "\n",
+        "nomes"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "cqEaWdpT_1JB",
+        "outputId": "89b1112a-f6cd-4705-f530-76e9c470cba7"
+      },
+      "execution_count": 9,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['Maristênio', 'Leo', 'Asdrúbal', 'Ademar']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 9
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Exemolo função map - cria uma nova lista com o dobro \n",
+        "numeros = [2,4,6,3]\n",
+        "nova_lista = list(map(lambda x : x*2, numeros))\n",
+        "nova_lista"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "DaMIbxCQBU2-",
+        "outputId": "376459dd-87e3-4471-a1bb-71ef5d2fdefb"
+      },
+      "execution_count": 11,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[4, 8, 12, 6]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 11
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#sem usar função map associada e dividir por 3\n",
+        "numDivi = list(map(lambda x : x/3, numeros))\n",
+        "\n",
+        "numDivi"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "e1u5_hiiDCu3",
+        "outputId": "8890c06d-0eef-40aa-9b7c-0a56e3841587"
+      },
+      "execution_count": 13,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[0.6666666666666666, 1.3333333333333333, 2.0, 1.0]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 13
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Pega cada número e soma 2.\n",
+        "numSoma = list(map(lambda x : x+2, numeros))\n",
+        "numSoma"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "CEDUiKfwDygW",
+        "outputId": "7d685444-2c2f-4edd-c019-64a0736dc592"
+      },
+      "execution_count": 14,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[4, 6, 8, 5]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 14
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Exemplo função filter - a partir de uma lista de nomes, \n",
+        "\n",
+        "nomes = ['josé', 'joaquim', 'Sebastião', 'Angelica', 'Leornado']\n",
+        "new_list = list(filter(lambda x : len(x)>5, nomes))\n",
+        "new_list"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Q22zoDwRExcL",
+        "outputId": "cea5057a-fde6-41e9-c79d-bc868e5080dd"
+      },
+      "execution_count": 17,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['joaquim', 'Sebastião', 'Angelica', 'Leornado']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 17
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Crie uma lista de notas, imprime as maiores que 6\n",
+        "notas = [3,4,7,8,9,10]\n",
+        "new_list = list(filter(lambda x : x >= 6, notas))\n",
+        "new_list"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "5ADuBp6NFwbl",
+        "outputId": "18dbee17-54aa-4c35-d0c2-c226f2f3d2b8"
+      },
+      "execution_count": 35,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[7, 8, 9, 10]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 35
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Dada uma lista de números, retorno uma lista contendo o quadrado de cada número.\n",
+        "notas = [3,5,4,6,8]\n",
+        "numDobro = list(map(lambda x : x*x, notas))\n",
+        "numDobro"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "qSp-yK66Ichw",
+        "outputId": "dbe205f9-11ab-451a-9d65-84b050d608a0"
+      },
+      "execution_count": 37,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[9, 25, 16, 36, 64]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 37
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Dada uma lista de nomes, retorne uma lista contendo o tamanho de cada nome.\n",
+        "nomes = ['caio', 'jorge', 'matheus', 'skywalker', 'julia']\n",
+        "nomesList = list(map(lambda x : len(x) , nomes))\n",
+        "nomesList"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ii0kO-1ZJ8S0",
+        "outputId": "448f9d86-65fc-44df-f783-9abb3b0cb00a"
+      },
+      "execution_count": 52,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[4, 5, 7, 9, 5]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 52
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Dada uma lista de números , retorne uma lista contendo apenas os números pares.\n",
+        "numeros = [4,5,7,3,9]\n",
+        "numPares = list(map(lambda x : x%2==0, numeros))\n",
+        "numPares"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "d7DTi95ONQwH",
+        "outputId": "0e10959b-1027-4af4-bab5-2f1778c34391"
+      },
+      "execution_count": 58,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[True, False, False, False, False]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 58
+        }
+      ]
+    }
+  ]
+}
